@@ -570,7 +570,7 @@
                   
                     
                   
-                  <a href="/meow@umich.edu" title="E-Mail &rarr; meow@umich.edu"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="mailto:meow@umich.edu" title="E-Mail &rarr; mailto:meow@umich.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -581,7 +581,7 @@
                   
                     
                   
-                  <a href="https://www.zhihu.com/people/regina8023/" title="Zhihu &rarr; https://www.zhihu.com/people/regina8023/" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>Zhihu</a>
+                  <a href="https://www.linkedin.com/in/jingliang-ren-a0959b128/" title="Linkedin &rarr; https://www.linkedin.com/in/jingliang-ren-a0959b128/" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -592,7 +592,18 @@
                   
                     
                   
-                  <a href="https://blog.csdn.net/Regina8023" title="CSDN &rarr; https://blog.csdn.net/Regina8023" rel="noopener" target="_blank"><i class="fa fa-fw fa-blog"></i>CSDN</a>
+                  <a href="https://www.zhihu.com/people/regina8023" title="Zhihu &rarr; https://www.zhihu.com/people/regina8023" rel="noopener" target="_blank"><i class="fa fa-fw fa-quora"></i>Zhihu</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.csdn.net/Regina8023" title="CSDN &rarr; https://blog.csdn.net/Regina8023" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>CSDN</a>
                 </span>
               
             </div>
@@ -764,9 +775,32 @@
 
   
   
-  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'hEjGFL2RQHYxyK6d4GeDT2Wc-gzGzoHsz',
+    appKey: 'bm5yqchxS7G2PhudgiDlaDHK',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
 
 
 
