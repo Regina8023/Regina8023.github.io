@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-10T14:31:24.303Z</updated>
+  <updated>2019-05-03T05:01:35.727Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Build &quot;Do Step on White Tiles&quot; with a SmartFusion Board</title>
+    <link href="http://yoursite.com/2019/05/03/373Proj/"/>
+    <id>http://yoursite.com/2019/05/03/373Proj/</id>
+    <published>2019-05-03T04:02:03.000Z</published>
+    <updated>2019-05-03T05:01:35.727Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373). I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of microcontroller – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">SmartFusion board</a>. </p><p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more friends!</p><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Background&quot;&gt;&lt;a href=&quot;#Background&quot; class=&quot;headerlink&quot; title=&quot;Background&quot;&gt;&lt;/a&gt;Background&lt;/h2&gt;&lt;p&gt;In the passing winter semester, I took
+      
+    
+    </summary>
+    
+      <category term="Technical" scheme="http://yoursite.com/categories/Technical/"/>
+    
+    
+      <category term="Embedded System" scheme="http://yoursite.com/tags/Embedded-System/"/>
+    
+      <category term="Course Project" scheme="http://yoursite.com/tags/Course-Project/"/>
+    
+  </entry>
   
   <entry>
     <title>四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行</title>
