@@ -98,18 +98,21 @@
 
 
 
-  <meta name="description" content="BackgroundIn the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373). I’ve learnt memory-mapped I/O, interrupt, timer and many other important conc">
+  <meta name="description" content="BackgroundIn the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important co">
 <meta name="keywords" content="Embedded System,Course Project">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
 <meta property="og:url" content="http://yoursite.com/2019/05/03/373Proj/index.html">
 <meta property="og:site_name" content="Regina8023&#39;s Blog">
-<meta property="og:description" content="BackgroundIn the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373). I’ve learnt memory-mapped I/O, interrupt, timer and many other important conc">
+<meta property="og:description" content="BackgroundIn the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important co">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-03T05:01:35.727Z">
+<meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png">
+<meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/diagram.png">
+<meta property="og:updated_time" content="2019-05-03T16:27:58.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
-<meta name="twitter:description" content="BackgroundIn the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373). I’ve learnt memory-mapped I/O, interrupt, timer and many other important conc">
+<meta name="twitter:description" content="BackgroundIn the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important co">
+<meta name="twitter:image" content="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png">
 
 
 
@@ -462,7 +465,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">673</span>
+                <span title="Symbols count in article">1.3k</span>
               
 
               
@@ -496,9 +499,19 @@
       
 
       
-        <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373). I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of microcontroller – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">SmartFusion board</a>. </p>
-<p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more friends!</p>
-<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2>
+        <h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of microcontroller – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">SmartFusion board</a>.</p>
+<p><img src="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png" alt=""><br> <a id="more"></a></p>
+<p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more people!</p>
+<p>I am responsible for VGA part. Thanks Ryan for writing technical details of Nitendo controller and LCD display!</p>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><img src="http://pqxqu7t26.bkt.gdipper.com/diagram.png" alt=""><br>SmartFusion board controls 5 peripherals: </p>
+<ul>
+<li>Nintendo controller and LCD display for calibration camera, setting game mode, controlling start and pause</li>
+<li>Projector controlled by VGA signal for projecting moving tiles, score, left health point</li>
+<li>PIXY camera for detecting if player’s feet are on white tiles</li>
+<li>Sound board for playing background music and sound effect</li>
+</ul>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>Here is a video captured during EECS373 Project Expo🥳!</p>
+<h2 id="Technical-Details"><a href="#Technical-Details" class="headerlink" title="Technical Details"></a>Technical Details</h2><h3 id="Nintendo-Controller"><a href="#Nintendo-Controller" class="headerlink" title="Nintendo Controller"></a>Nintendo Controller</h3><h3 id="LCD-Display"><a href="#LCD-Display" class="headerlink" title="LCD Display"></a>LCD Display</h3><h3 id="VGA"><a href="#VGA" class="headerlink" title="VGA"></a>VGA</h3><h3 id="PXIY"><a href="#PXIY" class="headerlink" title="PXIY"></a>PXIY</h3><h3 id="Sound-Board"><a href="#Sound-Board" class="headerlink" title="Sound Board"></a>Sound Board</h3>
       
     </div>
 
@@ -771,7 +784,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">2.</span> <span class="nav-text">Overview</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Overview"><span class="nav-number">2.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demo"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Technical-Details"><span class="nav-number">4.</span> <span class="nav-text">Technical Details</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nintendo-Controller"><span class="nav-number">4.1.</span> <span class="nav-text">Nintendo Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LCD-Display"><span class="nav-number">4.2.</span> <span class="nav-text">LCD Display</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VGA"><span class="nav-number">4.3.</span> <span class="nav-text">VGA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PXIY"><span class="nav-number">4.4.</span> <span class="nav-text">PXIY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sound-Board"><span class="nav-number">4.5.</span> <span class="nav-text">Sound Board</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -803,7 +816,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">16k</span>
+    <span title="Symbols count total">17k</span>
   
 
   
