@@ -98,13 +98,13 @@
 
 
 
-  <meta name="description" content="Background Probably one of the best interactive game projects I have seen in the class. comment from Prof. Alanson Sample and Prof. Matt Smith  In the passing winter semester, I took an interesting co">
+  <meta name="description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
 <meta name="keywords" content="Embedded System,Course Project">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Build 3-D version &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
 <meta property="og:url" content="http://yoursite.com/2019/05/03/373Proj/index.html">
 <meta property="og:site_name" content="Regina8023&#39;s Blog">
-<meta property="og:description" content="Background Probably one of the best interactive game projects I have seen in the class. comment from Prof. Alanson Sample and Prof. Matt Smith  In the passing winter semester, I took an interesting co">
+<meta property="og:description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/diagram.png">
@@ -113,10 +113,10 @@
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/vga_timing.png">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/sram.png">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/code_tree.png">
-<meta property="og:updated_time" content="2019-05-04T05:34:59.256Z">
+<meta property="og:updated_time" content="2019-05-04T06:39:17.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build 3-D version &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
-<meta name="twitter:description" content="Background Probably one of the best interactive game projects I have seen in the class. comment from Prof. Alanson Sample and Prof. Matt Smith  In the passing winter semester, I took an interesting co">
+<meta name="twitter:description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
 <meta name="twitter:image" content="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png">
 
 
@@ -470,7 +470,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">5.9k</span>
+                <span title="Symbols count in article">8.7k</span>
               
 
               
@@ -484,7 +484,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">5 mins.</span>
+                <span title="Reading time">8 mins.</span>
               
             </div>
           
@@ -506,12 +506,12 @@
       
         <h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><blockquote>
 <p>Probably one of the best interactive game projects I have seen in the class.</p>
-<p><em>comment from Prof. Alanson Sample and Prof. Matt Smith</em></p>
+<p align="right"> — <em>Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan</em> </p>
 </blockquote>
-<p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of microcontroller – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">SmartFusion board</a>.</p>
+<p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of development board – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">Actel SmartFusion&reg; SoC FPGA</a>..</p>
 <p><img src="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png" alt=""><br> <a id="more"></a></p>
-<p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more people!</p>
-<p>I am responsible for VGA part. Thanks Ryan for writing technical details of Nitendo controller and LCD display!</p>
+<p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. I am responsible for VGA part. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more people!</p>
+<p><strong>This post is written in shared effor with <a href="https://shineyruan.github.io" target="_blank" rel="noopener">Ryan</a>!</strong></p>
 <h1 id="Game-Rule"><a href="#Game-Rule" class="headerlink" title="Game Rule"></a>Game Rule</h1><p>There are 3 modes for our game: slow, medium and fast. Different modes have different numbers and speeds of tiles. At the beginning of the game, player will have 5 lives. </p>
 <ul>
 <li>🍭When left foot steps on a white tile, white tile becomes green and score++ </li>
@@ -522,14 +522,61 @@
 <h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>Here is a video captured during EECS373 Project Expo🥳!</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2wzuU-qfCKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<h1 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h1><p><img src="http://pqxqu7t26.bkt.gdipper.com/diagram.png" alt=""><br>SmartFusion board controls 5 peripherals: </p>
+<h1 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h1><p><img src="http://pqxqu7t26.bkt.gdipper.com/diagram.png" alt=""><br>As indicated in the graph, we use one SmartFusion&reg; board to control 5 main peripherals: </p>
 <ul>
 <li><strong>Projector</strong> controlled by VGA signal for projecting moving tiles, score, left health point</li>
 <li><strong>PIXY camera</strong> for detecting if player’s feet are on white tiles</li>
 <li><strong>Nintendo controller</strong> and <strong>LCD display</strong> for calibration camera, setting game mode, controlling start and pause</li>
 <li><strong>Sound board</strong> for playing background music and sound effect</li>
 </ul>
-<h1 id="Technical-Details"><a href="#Technical-Details" class="headerlink" title="Technical Details"></a>Technical Details</h1><h2 id="Memory-mapped-I-O-amp-Advanced-Peripheral-Bus"><a href="#Memory-mapped-I-O-amp-Advanced-Peripheral-Bus" class="headerlink" title="Memory-mapped I/O &amp; Advanced Peripheral Bus"></a>Memory-mapped I/O &amp; Advanced Peripheral Bus</h2><p>Instead of real memory at a given memory address, memory-mapped I/O has I/O devices respond. To control these ”memories”, we use APB (Advanced Peripheral Bus) as interface on peripherals. APB makes controlling signals with C code possible and then simplifies Verilog code.<br><img src="http://pqxqu7t26.bkt.gdipper.com/apb.png" alt=""></p>
+<h1 id="Technical-Details"><a href="#Technical-Details" class="headerlink" title="Technical Details"></a>Technical Details</h1><h2 id="Memory-mapped-I-O-amp-Advanced-Peripheral-Bus"><a href="#Memory-mapped-I-O-amp-Advanced-Peripheral-Bus" class="headerlink" title="Memory-mapped I/O &amp; Advanced Peripheral Bus"></a>Memory-mapped I/O &amp; Advanced Peripheral Bus</h2><p>In common sense, every memory address in a CPU corresponds to some place which can store data (aka “real memory”). However, in embedded systems, each input/output (I/O) device also corresponds to a specific memory address in the core. For these addresses, each of them has been mapped to an I/O device instead of “real memory”, such as Analog-to-Digital Converter (ADC), Digital-to-Analog Converter (DAC), General-Purpose I/O (GPIO) pins, etc. Accessing these addresses through CPU is actually accessing their corresponding I/O devices.</p>
+<p>APB (Advanced Peripheral Bus) is used as an interface to access these peripherals. A typical APB consists of the following signal (by naming convention):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Signal Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>PRDATA</code></td>
+<td>Data line where CPU reads from the peripheral.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PWDATA</code></td>
+<td>Data line where CPU writes to the peripheral.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PWRITE</code></td>
+<td>Indicates whether it is a <strong>read</strong> or a <strong>write</strong> transaction.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PENABLE</code></td>
+<td>Indicates whether CPU has started the transaction.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PSEL</code></td>
+<td>Indicates whether CPU has selected this peripheral.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PADDR</code></td>
+<td>Indicates what address CPU has chosen to interact with.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PCLK</code></td>
+<td>Clock signal from CPU.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PREADY</code></td>
+<td><strong>Controlled by peripheral;</strong> indicates whether peripheral has been prepared for the transaction.</td>
+</tr>
+</tbody>
+</table>
+<p>By convention, in terms of APB, the CPU is called “master” while the peripherals are called “slaves”. While signals are generally high/low voltages which is in essence a hardware issue, APB makes generating these signals with C code possible.<br><img src="http://pqxqu7t26.bkt.gdipper.com/apb.png" alt=""></p>
+<h3 id="Implementation-in-Verilog"><a href="#Implementation-in-Verilog" class="headerlink" title="Implementation in Verilog"></a>Implementation in Verilog</h3><p>While in most microcontrollers APB is not able to be modified because it is a very complicated circuit network soldered onto the PCB, with an FPGA we can take full advantage of that and customize our own APB. In Verilog, we can simply make use of an unused memory address and create the following module (APB interface):</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> apb_interface(</span><br><span class="line">        <span class="keyword">input</span> PCLK,                 <span class="comment">// clock</span></span><br><span class="line">        <span class="keyword">input</span> PRESERN,              <span class="comment">// system reset</span></span><br><span class="line"><span class="comment">// APB3 BUS INTERFACE</span></span><br><span class="line">        <span class="keyword">input</span> PSEL,                 <span class="comment">// peripheral select</span></span><br><span class="line">        <span class="keyword">input</span> PENABLE,              <span class="comment">// distinguishes access phase</span></span><br><span class="line">        <span class="keyword">output</span> <span class="keyword">wire</span> PREADY,         <span class="comment">// peripheral ready signal</span></span><br><span class="line">        <span class="keyword">output</span> <span class="keyword">wire</span> PSLVERR,        <span class="comment">// error signal</span></span><br><span class="line">        <span class="keyword">input</span> PWRITE,               <span class="comment">// read/write control bit</span></span><br><span class="line">        <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] PADDR,         <span class="comment">// IO address</span></span><br><span class="line">        <span class="keyword">input</span> <span class="keyword">wire</span> [<span class="number">31</span>:<span class="number">0</span>] PWDATA,   <span class="comment">// (processor) bus is writing data to</span></span><br><span class="line">                                    <span class="comment">// this device 32 bits</span></span><br><span class="line">        <span class="keyword">output</span> <span class="keyword">reg</span> [<span class="number">31</span>:<span class="number">0</span>] PRDATA,   <span class="comment">// (processor) bus is reading data from this device</span></span><br><span class="line">        <span class="comment">/*** Your Code (inputs &amp; outputs) ***/</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">assign</span> PSLVERR  = <span class="number">0</span>;    <span class="comment">// assumes no error generation</span></span><br><span class="line"><span class="keyword">assign</span> PREADY   = <span class="number">1</span>;    <span class="comment">// assumes zero wait</span></span><br><span class="line"><span class="keyword">wire</span> write_enable   = (PENABLE &amp;&amp; PWRITE &amp;&amp; PSEL);  <span class="comment">//decodes APB3 write cycle</span></span><br><span class="line"><span class="keyword">wire</span> read_enable    = (!PWRITE &amp;&amp; PSEL);            <span class="comment">//decode APB3 read cycle</span></span><br><span class="line"><span class="comment">// ****** Your code ******</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+<p>We can see that all the I/O ports in the Verilog module has to strictly follow the APB convention mentioned above.</p>
 <h2 id="VGA"><a href="#VGA" class="headerlink" title="VGA"></a>VGA</h2><p>VGA is short for <em>Video Graphics Array</em>. Although it is a relatively aged display method (introduced by IBM in 1987), its frequency (60Hz per frame) is good enough for our display purpose. </p>
 <h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><p><img src="http://pqxqu7t26.bkt.gdipper.com/vga_pin.png" alt=""><br>A VGA cable has 15 pins, 6 of them are used in the project:</p>
 <ul>
@@ -544,7 +591,7 @@
 <p>In a word, to project a desired video, we just need to <strong>output correct RGB signal for each pixel in sequence</strong>.</p>
 <h3 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h3><p>The main logic for VGA display is implenmented in C code: it determines the positions of tiles, scores and health point; then writes these information in specific APB addresses. Verilog code is only for analyzing information from these APB addresses and generating corresponding signals.</p>
 <p>A 60-Hz interrupt will be generated periodically in fabric. In <em>main.c</em>,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((interrupt)) void Fabric_IRQHandler(void)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((interrupt)) <span class="function"><span class="keyword">void</span> <span class="title">Fabric_IRQHandler</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>is interrupt handler, which is responsible for refresh of the whole frame.</p>
 <h4 id="Moving-Tiles"><a href="#Moving-Tiles" class="headerlink" title="Moving Tiles"></a>Moving Tiles</h4><p>There are 8 tiles in maximum in one frame. To make them look as random as possible, I randomly generate 3 attributes for each tile:</p>
 <ul>
@@ -553,7 +600,7 @@
 <li><strong>delay</strong> for interval between the time when a tile goes out of the frame and when it reappears at the top of the frame.</li>
 </ul>
 <p>In <em>vga.c</em>,</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void random_mode(int k) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">random_mode</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>controls the new position of kth tile based on its old position. </p>
 <p>Besides, the attribute, <strong>left_on</strong>, <strong>right_on</strong>, will control color of the tile. When it is set to <em>true</em> inside <em>pixy.c</em>, the color will turn green or red.</p>
 <h4 id="Score-amp-Health-Point"><a href="#Score-amp-Health-Point" class="headerlink" title="Score &amp; Health Point"></a>Score &amp; Health Point</h4><p>Once <strong>left_on</strong> or <strong>right_on</strong> is set to <em>true</em> inside <em>pixy.c</em>, the variable, <strong>score</strong>, will add one.</p>
@@ -848,7 +895,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Game-Rule"><span class="nav-number">2.</span> <span class="nav-text">Game Rule</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Demo"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Component"><span class="nav-number">4.</span> <span class="nav-text">Component</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Technical-Details"><span class="nav-number">5.</span> <span class="nav-text">Technical Details</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-mapped-I-O-amp-Advanced-Peripheral-Bus"><span class="nav-number">5.1.</span> <span class="nav-text">Memory-mapped I/O &amp; Advanced Peripheral Bus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGA"><span class="nav-number">5.2.</span> <span class="nav-text">VGA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics"><span class="nav-number">5.2.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation"><span class="nav-number">5.2.2.</span> <span class="nav-text">Implementation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Moving-Tiles"><span class="nav-number">5.2.2.1.</span> <span class="nav-text">Moving Tiles</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Score-amp-Health-Point"><span class="nav-number">5.2.2.2.</span> <span class="nav-text">Score &amp; Health Point</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Show-More-Complicated-Graph"><span class="nav-number">5.2.3.</span> <span class="nav-text">Show More Complicated Graph</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nintendo-Controller"><span class="nav-number">5.3.</span> <span class="nav-text">Nintendo Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LCD-Display"><span class="nav-number">5.4.</span> <span class="nav-text">LCD Display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PIXY"><span class="nav-number">5.5.</span> <span class="nav-text">PIXY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sound-Board"><span class="nav-number">5.6.</span> <span class="nav-text">Sound Board</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">6.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Acknowledgement"><span class="nav-number">7.</span> <span class="nav-text">Acknowledgement</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Game-Rule"><span class="nav-number">2.</span> <span class="nav-text">Game Rule</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Demo"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Component"><span class="nav-number">4.</span> <span class="nav-text">Component</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Technical-Details"><span class="nav-number">5.</span> <span class="nav-text">Technical Details</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-mapped-I-O-amp-Advanced-Peripheral-Bus"><span class="nav-number">5.1.</span> <span class="nav-text">Memory-mapped I/O &amp; Advanced Peripheral Bus</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-in-Verilog"><span class="nav-number">5.1.1.</span> <span class="nav-text">Implementation in Verilog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGA"><span class="nav-number">5.2.</span> <span class="nav-text">VGA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics"><span class="nav-number">5.2.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation"><span class="nav-number">5.2.2.</span> <span class="nav-text">Implementation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Moving-Tiles"><span class="nav-number">5.2.2.1.</span> <span class="nav-text">Moving Tiles</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Score-amp-Health-Point"><span class="nav-number">5.2.2.2.</span> <span class="nav-text">Score &amp; Health Point</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Show-More-Complicated-Graph"><span class="nav-number">5.2.3.</span> <span class="nav-text">Show More Complicated Graph</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nintendo-Controller"><span class="nav-number">5.3.</span> <span class="nav-text">Nintendo Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LCD-Display"><span class="nav-number">5.4.</span> <span class="nav-text">LCD Display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PIXY"><span class="nav-number">5.5.</span> <span class="nav-text">PIXY</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sound-Board"><span class="nav-number">5.6.</span> <span class="nav-text">Sound Board</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">6.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Acknowledgement"><span class="nav-number">7.</span> <span class="nav-text">Acknowledgement</span></a></li></ol></div>
             
 
           </div>
@@ -880,7 +927,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">22k</span>
+    <span title="Symbols count total">24k</span>
   
 
   
@@ -889,7 +936,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">20 mins.</span>
+    <span title="Reading time total">22 mins.</span>
   
 </div>
 
