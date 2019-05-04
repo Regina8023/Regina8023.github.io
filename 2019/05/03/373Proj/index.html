@@ -112,8 +112,9 @@
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/vga_pin.png">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/vga_timing.png">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/sram.png">
+<meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/adafruit_products_2133_top_ORIG.jpg">
 <meta property="og:image" content="http://pqxqu7t26.bkt.gdipper.com/code_tree.png">
-<meta property="og:updated_time" content="2019-05-04T06:39:17.585Z">
+<meta property="og:updated_time" content="2019-05-04T14:58:43.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build 3-D version &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
 <meta name="twitter:description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
@@ -429,7 +430,14 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Technical/" itemprop="url" rel="index"><span itemprop="name">Technical</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tech/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a></span>
 
                 
                 
@@ -470,7 +478,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">8.7k</span>
+                <span title="Symbols count in article">9.1k</span>
               
 
               
@@ -508,7 +516,7 @@
 <p>Probably one of the best interactive game projects I have seen in the class.</p>
 <p align="right"> — <em>Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan</em> </p>
 </blockquote>
-<p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of development board – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">Actel SmartFusion&reg; SoC FPGA</a>..</p>
+<p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of development board – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">Actel SmartFusion&reg; SoC FPGA</a>.</p>
 <p><img src="http://pqxqu7t26.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png" alt=""><br> <a id="more"></a></p>
 <p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. I am responsible for VGA part. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more people!</p>
 <p><strong>This post is written in shared effor with <a href="https://shineyruan.github.io" target="_blank" rel="noopener">Ryan</a>!</strong></p>
@@ -615,7 +623,12 @@
 <li>Timing. When use APB and SRAM, timing of these two things need to be considered carefully. The PREADY cannot be set to high all the time since SRAM need one clock period to finish reading/writing. So PREADY should be delayed for one clock period.</li>
 <li>Memory limitation. The SRAM inside SmartFusion is only 64kB. </li>
 </ul>
-<h2 id="Nintendo-Controller"><a href="#Nintendo-Controller" class="headerlink" title="Nintendo Controller"></a>Nintendo Controller</h2><h2 id="LCD-Display"><a href="#LCD-Display" class="headerlink" title="LCD Display"></a>LCD Display</h2><h2 id="PIXY"><a href="#PIXY" class="headerlink" title="PIXY"></a>PIXY</h2><h2 id="Sound-Board"><a href="#Sound-Board" class="headerlink" title="Sound Board"></a>Sound Board</h2><h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p>All code are available in <a href="https://github.com/Regina8023/Step-On-White-Tiles" target="_blank" rel="noopener">my github</a> (direcoty structure is shown below). The whole project is available in <a href="https://github.com/shineyruan/Don-t-Step-on-White-Tiles" target="_blank" rel="noopener">Ryan’s github</a>.<br><img src="http://pqxqu7t26.bkt.gdipper.com/code_tree.png" alt=""></p>
+<h2 id="Nintendo-Controller"><a href="#Nintendo-Controller" class="headerlink" title="Nintendo Controller"></a>Nintendo Controller</h2><h2 id="LCD-Display"><a href="#LCD-Display" class="headerlink" title="LCD Display"></a>LCD Display</h2><h2 id="PIXY"><a href="#PIXY" class="headerlink" title="PIXY"></a>PIXY</h2><h2 id="Sound-Board"><a href="#Sound-Board" class="headerlink" title="Sound Board"></a>Sound Board</h2><p>We use <a href="https://www.adafruit.com/product/2341" target="_blank" rel="noopener">Adafruit Audio FX Mini Sound Board</a> for playing background music. </p>
+<p><img src="http://pqxqu7t26.bkt.gdipper.com/adafruit_products_2133_top_ORIG.jpg" alt=""></p>
+<p>By plugging in the sound board into computer using USB cable, it will show up as a new USB key. Just copy music into it, music will be written properly in its disk.</p>
+<p>To trigger audio, pull down one of trigger pins - named #0 thru #10 to; to stop audio, pull down Rst.</p>
+<p>The control of this board also uses APB. </p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p>All code are available in <a href="https://github.com/Regina8023/Step-On-White-Tiles" target="_blank" rel="noopener">my github</a> (direcoty structure is shown below). The whole project is available in <a href="https://github.com/shineyruan/Don-t-Step-on-White-Tiles" target="_blank" rel="noopener">Ryan’s github</a>.<br><img src="http://pqxqu7t26.bkt.gdipper.com/code_tree.png" alt=""></p>
 <h1 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h1><p>Special thanks for </p>
 <ul>
 <li>Prof. Sample and Prof. Smith’s support throughout the semester ☕️🥃</li>
@@ -763,7 +776,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -927,7 +942,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">24k</span>
+    <span title="Symbols count total">25k</span>
   
 
   
