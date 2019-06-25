@@ -120,7 +120,7 @@
 <meta property="og:image" content="http://pswufkixe.bkt.gdipper.com/373Proj_pixy_porting.jpg">
 <meta property="og:image" content="http://pswufkixe.bkt.gdipper.com/adafruit_products_2133_top_ORIG.jpg">
 <meta property="og:image" content="http://pswufkixe.bkt.gdipper.com/code_tree.png">
-<meta property="og:updated_time" content="2019-06-19T13:57:15.787Z">
+<meta property="og:updated_time" content="2019-06-25T23:01:08.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Build 3-D version &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
 <meta name="twitter:description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
@@ -525,7 +525,7 @@
 <p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of development board – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">Actel SmartFusion&reg; SoC FPGA</a>.</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/imagen-don-t-tap-the-white-tile-3d-1gal.png" alt=""><br> <a id="more"></a></p>
 <p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. I am responsible for VGA part. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more people!</p>
-<p><strong>This post is written in shared effor with <a href="https://shineyruan.github.io" target="_blank" rel="noopener">Ryan</a>!</strong></p>
+<p><strong>This post is written in shared effort with <a href="https://shineyruan.github.io" target="_blank" rel="noopener">Ryan</a>!</strong></p>
 <h1 id="Game-Rule"><a href="#Game-Rule" class="headerlink" title="Game Rule"></a>Game Rule</h1><p>There are 3 modes for our game: slow, medium and fast. Different modes have different numbers and speeds of tiles. At the beginning of the game, player will have 5 lives. </p>
 <ul>
 <li>🍭When left foot steps on a white tile, white tile becomes green and score++ </li>
@@ -627,7 +627,7 @@
 <h4 id="Score-amp-Health-Point"><a href="#Score-amp-Health-Point" class="headerlink" title="Score &amp; Health Point"></a>Score &amp; Health Point</h4><p>Once <strong>left_on</strong> or <strong>right_on</strong> is set to <em>true</em> inside <em>pixy.c</em>, the variable, <strong>score</strong>, will add one.</p>
 <p>If <strong>left_on</strong> and <strong>right_on</strong> are <em>false</em> until the tile goes out of the frame, one life will lose.</p>
 <p>The display of score🔢 and heart❤️ are hard-coded in verilog. Another way to show them is using Sprites + SRAM (see below).</p>
-<h3 id="Show-More-Complicated-Graph"><a href="#Show-More-Complicated-Graph" class="headerlink" title="Show More Complicated Graph"></a>Show More Complicated Graph</h3><p>Although the display for this game is fairly simple, I tried using <a href="https://en.wikipedia.org/wiki/Sprite_(computer_graphics" target="_blank" rel="noopener">Sprites</a>) and SRAM, which is used for complicated graphics (but didn’t use it in final version of project).</p>
+<h3 id="Show-More-Complicated-Graph"><a href="#Show-More-Complicated-Graph" class="headerlink" title="Show More Complicated Graph"></a>Show More Complicated Graph</h3><p>Although the display for this game is fairly simple, I tried using <a href="https://en.wikipedia.org/wiki/Sprite" target="_blank" rel="noopener">Sprites</a>and SRAM, which is used for complicated graphics (but didn’t use it in final version of project).</p>
 <p>The idea behind Sprites is that generate RGB values for each pixel in a picture; and then store them in SRAM of microcontroller; read RGB value for corresponding pixel from SRAM when scan point comes to the pixel.</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/sram.png" alt=""></p>
 <p>The SRAM module inside SmartFusion is shown above. Pull up r_en when you are reading, pull up w_en when you are writing.</p>
@@ -639,13 +639,13 @@
 <h2 id="Nintendo-Controller"><a href="#Nintendo-Controller" class="headerlink" title="Nintendo Controller"></a>Nintendo Controller</h2><p>For the controller for the user menu selection, we’re using a classic Nintendo&reg; NES controller. This is a relatively aged controller, but its signal is easy to decode and it’s sufficient for our design.</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/373Proj_controller_overview.jpg" alt=""></p>
 <p>We can see that it consists of 8 buttons: Up, Down, Left, Right, Select, Start, A and B.</p>
-<p>For more details, <a href="http://uzebox.org/files/NES-controller-Hydra-Ch6All-v1.0.pdf" target="_blank" rel="noopener">a document that I have referred to</a> when programming the NES controller says that:</p>
+<p>For more details, a <a href="http://uzebox.org/files/NES-controller-Hydra-Ch6All-v1.0.pdf" target="_blank" rel="noopener">datasheet</a> that I have referred to when programming the NES controller says that:</p>
 <blockquote>
 <p>The Nintendo Entertainment System or NES, also known as the Nintendo Family Computer (Famicom) was released in Japan in 1983 and shortly after in the USA in 1985. The system was even more successful than the Atari 2600 and more or less put the last stake in the heart of Atari home consoles forever. The NES sold more than 60,000,000 units worldwide in its heyday and still sells to this day (I just bought 4 of them from eStarland.com)! There are over 200 clones of the system in circulation and the word “Nintendo” is used in many cultures as a youth slang term with many “varied” meanings.</p>
 <p>The system itself was nothing compared to the Propeller chip’s computing power, the NES was powered by the 8-bit 6502 running at 1.79 MHz, but the NES did have quite a bit of dedicated graphics hardware making it quite a contender in the 8-bit era, it sported multiple tile maps, graphics planes, sprites, sound, and a lot more.</p>
 <p align="right"> — <i>“Game Programming for the Propeller Powered HYDRA”</i>, pp. 95 </p>
 </blockquote>
-<h3 id="Interfacing-the-Nintendo-NES-controller"><a href="#Interfacing-the-Nintendo-NES-controller" class="headerlink" title="Interfacing the Nintendo NES controller"></a>Interfacing the Nintendo NES controller</h3><p>On the back of the NES controller, it is actually organized as the following figure shows.</p>
+<h3 id="Interfacing-the-Nintendo-NES-controller"><a href="#Interfacing-the-Nintendo-NES-controller" class="headerlink" title="Interfacing the Nintendo NES controller"></a>Interfacing the Nintendo NES controller</h3><p>On the back of the NES controller, it is actually organized as the following figure.</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/373Proj_controller_back.jpg" alt="An inside view of an NES controller."></p>
 <p>We can see that there’re five wires: brown, red, orange, yellow, white. The functions of these wires are summarized below.</p>
 <table>
@@ -697,24 +697,30 @@
 <h2 id="LCD-Display"><a href="#LCD-Display" class="headerlink" title="LCD Display"></a>LCD Display</h2><p>We use <a href="https://www.sparkfun.com/products/9568" target="_blank" rel="noopener">Sparkfun’s $20\times4$ serial enabled LCD display</a> in our project. The interface of this LCD is actually really simple &mdash; just UART. If you send a character <code>a</code> to it through UART, it will display an “a” on the screen; if you send a string <code>Hello World</code> to it, it will display “Hello World”.</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/373Proj_lcd.jpg" alt="A typical Sparkfun&#39;s 20x4 LCD display."></p>
 <p>It is worth noticing that this LCD module displays characters based on the position of a cursor. This is very similar to writing on a text file. The character sent to the module will always be written at the position of the cursor. For instance, if the current cursor position is at the first position of the first line, the incoming character <code>a</code> will then be displayed at the first position in the first line. What is worth mentioning is that there are some special ASCII character pairs that have special meanings and have been hard-coded into the LCD module. For example, some of these special characters are:</p>
+<style>
+table th:first-of-type {
+    width: 120px;
+}
+</style>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Character Value</th>
+<th style="text-align:left">Character Value</th>
 <th style="text-align:left">Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><code>0xFE, 0x01</code></td>
+<td style="text-align:left"><code>0xFE, 0x01</code></td>
 <td style="text-align:left">Clear the entire display.</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>0xFE, 0x80</code></td>
+<td style="text-align:left"><code>0xFE, 0x80</code></td>
 <td style="text-align:left">Set cursor position to be the first position in the 1<sup>st</sup> line. The 20 values starting from <code>0x80</code> correspond to the cursor positions from the beginning of the 1<sup>st</sup> line to the end of the first line. For the first position in the 2<sup>nd</sup> line, add 64 to <code>0x80</code>; for the first position of the 3<sup>rd</sup> line, add 20 to <code>0x80</code>; for the first position of the 4<sup>th</sup> line, add 84 to <code>0x80</code>.</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>0x12</code></td>
+<td style="text-align:left"><code>0x12</code></td>
 <td style="text-align:left">Reset the whole module.</td>
 </tr>
 </tbody>
@@ -722,7 +728,7 @@
 <p><strong><em>Note. Two bytes separated by a comma means a consecutive ASCII character pair.</em> For instance, <code>0xFE, 0x80</code> means <code>0xFE</code> should be first sent to the LCD module, followed by a <code>0x80</code>.</strong></p>
 <h3 id="Constructing-the-User-Menu"><a href="#Constructing-the-User-Menu" class="headerlink" title="Constructing the User Menu"></a>Constructing the User Menu</h3><p>In terms of constructing a complete user menu, we use <code>&gt;</code> as the prompt character for the selected option. We develop a data structure called <code>LCD_Display</code> to store the current contents of the 4 lines as well as the line index of the prompt character, and another <code>Menu</code> for multiple layers of the menu. For simplicity, we set each layer of the menu has a maximum size of 6.</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/373_lcd_tree.png" alt=""></p>
-<p>For more detailed information, please visit our <a href="https://github.com/shineyruan/Don-t-Step-on-White-Tiles" target="_blank" rel="noopener">GitHub repo</a> and take a look at the <code>menu.[ch]</code> library files.</p>
+<p>For more detailed information, please visit our <a href="https://github.com/Regina8023/Step-On-White-Tiles/tree/master/SoftConsole/DSWT_MSS_MSS_CM3_0/DSWT_MSS_MSS_CM3_0_app" target="_blank" rel="noopener">GitHub repo</a> and take a look at the <code>menu.[ch]</code>.</p>
 <h2 id="Pixy-Camera"><a href="#Pixy-Camera" class="headerlink" title="Pixy Camera"></a>Pixy Camera</h2><p><a href="https://pixycam.com/" target="_blank" rel="noopener">Pixy camera</a> is a small and responsive open-source camera developed by CREATE Lab, a part of the Robotics Institute at Carnegie Mellon University. It is equipped with color recognition and it can tell the location of the object in real time within its field of view. It has a very nice interface for MCU, which we can integrate into our SmartFusion&reg; board. Particularly, it is able to transmit its color recognition results to MCU via three interfaces: I2C, SPI, and UART. It is known that SPI has the highest data transmission rate among the three popular protocols, so we decide to utilize its SPI interface.</p>
 <h3 id="Porting-Guidelines"><a href="#Porting-Guidelines" class="headerlink" title="Porting Guidelines"></a>Porting Guidelines</h3><p>According to the <a href="https://docs.pixycam.com/wiki/doku.php?id=wiki:v1:porting_guide" target="_blank" rel="noopener">official documentation</a>, Pixy camera has the following available ports:</p>
 <p><img src="http://pswufkixe.bkt.gdipper.com/373Proj_pixy_porting.jpg" alt="The available ports and its corresponding functionality on Pixy camera."></p>
@@ -788,7 +794,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/13/四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行/" rel="next" title="四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行">
+              <a href="/2019/01/13/mexico_cuba/" rel="next" title="四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行">
                 <i class="fa fa-chevron-left"></i> 四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行
               </a>
             
@@ -798,7 +804,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/10/toronto-and-chicago/" rel="prev" title="去大城市看看：多伦多与芝加哥">
+              <a href="/2019/06/10/toronto_chicago/" rel="prev" title="去大城市看看：多伦多与芝加哥">
                 去大城市看看：多伦多与芝加哥 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -1564,6 +1570,50 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
 
   
 
