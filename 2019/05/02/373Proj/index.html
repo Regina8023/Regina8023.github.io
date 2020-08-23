@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=6.7.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=6.7.0">
+
+
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=6.7.0" color="#222">
+
+
+
+  <meta name="msapplication-config" content="/images/browserconfig2.xml">
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.7.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
+<meta name="keywords" content="English,Embedded System,Course Project">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Build 3-D version &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
+<meta property="og:url" content="http://yoursite.com/2019/05/02/373Proj/index.html">
+<meta property="og:site_name" content="Regina8023&#39;s Blog">
+<meta property="og:description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijopetj208b0b4jrq.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ik1e5ej20pn0gp413.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijq5uzj20to0iu754.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ik0wfcj20te0em40t.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijpln7j20km0aqt9k.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijtmm9j20gx0fwwey.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4il5u76j215o0md428.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikny6vj20jg0admy7.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikm8pej213y064wey.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikt7guj20go0gogqd.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikld6pj20zk0k0wet.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikefr1j20sg0e60tm.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ilekenj20m80h3jvf.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4iky1c2j20h40kiq4q.jpg">
+<meta property="og:updated_time" content="2020-04-08T02:26:41.149Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Build 3-D version &quot;Do Step on White Tiles&quot; with a SmartFusion Board">
+<meta name="twitter:description" content="Background Probably one of the best interactive game projects I have seen in the class.  — Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan   In the passing winter semester, I too">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijopetj208b0b4jrq.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Regina8023's Blog" type="application/atom+xml">
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/02/373Proj/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Build 3-D version "Do Step on White Tiles" with a SmartFusion Board | Regina8023's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Regina8023's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Be better than you were yesterday.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/02/373Proj/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jingliang Ren">
+      <meta itemprop="description" content="Meow.">
+      <meta itemprop="image" content="https://i.postimg.cc/kXqm01FX/2019-01-14-22-10-51-1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Regina8023's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Build 3-D version "Do Step on White Tiles" with a SmartFusion Board
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-03 00:02:03" itemprop="dateCreated datePublished" datetime="2019-05-03T00:02:03-04:00">2019-05-03</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <a href="/2019/05/02/373Proj/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/05/02/373Proj/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">20k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">18 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><blockquote>
+<p>Probably one of the best interactive game projects I have seen in the class.</p>
+<p align="right"> — <em>Prof. Alanson Sample and Prof. Matt Smith, the University of Michigan</em> </p>
+</blockquote>
+<p>In the passing winter semester, I took an interesting course: Introduction to Embedded System Design (EECS 373)🤩. I’ve learnt memory-mapped I/O, interrupt, timer and many other important concepts in embedded system. The target of this course is to build an embedded system by using a specific kind of development board – <a href="https://en.wikipedia.org/wiki/Actel_SmartFusion" target="_blank" rel="noopener">Actel SmartFusion&reg; SoC FPGA</a>.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijopetj208b0b4jrq.jpg" alt=""><br> <a id="more"></a></p>
+<p>Our (Zhihao Ruan, Shiyu Liu, Kun Huang and me) final project is “Do Step on White Tiles”, which is inspired by a popular mobile game “Don’t Tap the White Tile”. I am responsible for VGA part. This is one of my proudest projects, so I’d like to write a blog to record this project experience and share these fun technical details with more people!</p>
+<p><strong>This post is written in shared effort with <a href="https://shineyruan.github.io" target="_blank" rel="noopener">Ryan</a>!</strong></p>
+<h1 id="Game-Rule"><a href="#Game-Rule" class="headerlink" title="Game Rule"></a>Game Rule</h1><p>There are 3 modes for our game: slow, medium and fast. Different modes have different numbers and speeds of tiles. At the beginning of the game, player will have 5 lives. </p>
+<ul>
+<li>🍭When left foot steps on a white tile, white tile becomes green and score++ </li>
+<li>🍭When left foot steps on a white tile, white tile becomes red and score++ </li>
+<li>🌶When miss a white tile, player will lose one life </li>
+<li>☠️When all lives go, game over</li>
+</ul>
+<h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><p>Here is a video captured during EECS373 Project Expo🥳!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2wzuU-qfCKQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h1 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h1><p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ik1e5ej20pn0gp413.jpg" alt=""><br>As indicated in the graph, we use one SmartFusion&reg; board to control 5 main peripherals: </p>
+<ul>
+<li><strong>Projector</strong> controlled by VGA signal for projecting moving tiles, score, left health point</li>
+<li><strong>PIXY camera</strong> for detecting if player’s feet are on white tiles</li>
+<li><strong>Nintendo controller</strong> and <strong>LCD display</strong> for calibration camera, setting game mode, controlling start and pause</li>
+<li><strong>Sound board</strong> for playing background music and sound effect</li>
+</ul>
+<h1 id="Technical-Details"><a href="#Technical-Details" class="headerlink" title="Technical Details"></a>Technical Details</h1><h2 id="Code-Environments"><a href="#Code-Environments" class="headerlink" title="Code Environments"></a>Code Environments</h2><p>As for the project developing environment, we’re using <a href="https://www.microsemi.com/product-directory/design-resources/1750-libero-soc" target="_blank" rel="noopener">Libero SoC Design Software</a> as well as <a href="https://www.microsemi.com/product-directory/design-tools/4879-softconsole#overview" target="_blank" rel="noopener">Microsemi SoftConsole</a>. The specific versions are:</p>
+<ul>
+<li>Libero SoC v11.9 SP3</li>
+<li>Microsemi SoftConsole v3.4</li>
+<li>Windows 10 Pro 1809 (operating system)</li>
+</ul>
+<p><strong>Note that Libero SoC is neither forward nor backward compatible.</strong> A Libero SoC v11.9 project is not compatible with a Libero SoC v11.9 SP3 project.</p>
+<h2 id="Memory-mapped-I-O-amp-Advanced-Peripheral-Bus"><a href="#Memory-mapped-I-O-amp-Advanced-Peripheral-Bus" class="headerlink" title="Memory-mapped I/O &amp; Advanced Peripheral Bus"></a>Memory-mapped I/O &amp; Advanced Peripheral Bus</h2><p>In common sense, every memory address in a CPU corresponds to some place which can store data (aka “real memory”). However, in embedded systems, each input/output (I/O) device also corresponds to a specific memory address in the core. For these addresses, each of them has been mapped to an I/O device instead of “real memory”, such as Analog-to-Digital Converter (ADC), Digital-to-Analog Converter (DAC), General-Purpose I/O (GPIO) pins, etc. Accessing these addresses through CPU is actually accessing their corresponding I/O devices.</p>
+<p>APB (Advanced Peripheral Bus) is used as an interface to access these peripherals. A typical APB consists of the following signal (by naming convention):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Signal Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>PRDATA</code></td>
+<td>Data line where CPU reads from the peripheral.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PWDATA</code></td>
+<td>Data line where CPU writes to the peripheral.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PWRITE</code></td>
+<td>Indicates whether it is a <strong>read</strong> or a <strong>write</strong> transaction.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PENABLE</code></td>
+<td>Indicates whether CPU has started the transaction.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PSEL</code></td>
+<td>Indicates whether CPU has selected this peripheral.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PADDR</code></td>
+<td>Indicates what address CPU has chosen to interact with.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PCLK</code></td>
+<td>Clock signal from CPU.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>PREADY</code></td>
+<td><strong>Controlled by peripheral;</strong> indicates whether peripheral has been prepared for the transaction.</td>
+</tr>
+</tbody>
+</table>
+<p>By convention, in terms of APB, the CPU is called “master” while the peripherals are called “slaves”. While signals are generally high/low voltages which is in essence a hardware issue, APB makes generating these signals with C code possible.<br><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijq5uzj20to0iu754.jpg" alt=""></p>
+<h3 id="Implementation-in-Verilog"><a href="#Implementation-in-Verilog" class="headerlink" title="Implementation in Verilog"></a>Implementation in Verilog</h3><p>While in most microcontrollers APB is not able to be modified because it is a very complicated circuit network soldered onto the PCB, with an FPGA we can take full advantage of that and customize our own APB. In Verilog, we can simply make use of an unused memory address and create the following module (APB interface):</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> apb_interface(</span><br><span class="line">        <span class="keyword">input</span> PCLK,                 <span class="comment">// clock</span></span><br><span class="line">        <span class="keyword">input</span> PRESERN,              <span class="comment">// system reset</span></span><br><span class="line"><span class="comment">// APB3 BUS INTERFACE</span></span><br><span class="line">        <span class="keyword">input</span> PSEL,                 <span class="comment">// peripheral select</span></span><br><span class="line">        <span class="keyword">input</span> PENABLE,              <span class="comment">// distinguishes access phase</span></span><br><span class="line">        <span class="keyword">output</span> <span class="keyword">wire</span> PREADY,         <span class="comment">// peripheral ready signal</span></span><br><span class="line">        <span class="keyword">output</span> <span class="keyword">wire</span> PSLVERR,        <span class="comment">// error signal</span></span><br><span class="line">        <span class="keyword">input</span> PWRITE,               <span class="comment">// read/write control bit</span></span><br><span class="line">        <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] PADDR,         <span class="comment">// IO address</span></span><br><span class="line">        <span class="keyword">input</span> <span class="keyword">wire</span> [<span class="number">31</span>:<span class="number">0</span>] PWDATA,   <span class="comment">// (processor) bus is writing data to</span></span><br><span class="line">                                    <span class="comment">// this device 32 bits</span></span><br><span class="line">        <span class="keyword">output</span> <span class="keyword">reg</span> [<span class="number">31</span>:<span class="number">0</span>] PRDATA,   <span class="comment">// (processor) bus is reading data from this device</span></span><br><span class="line">        <span class="comment">/*** Your Code (inputs &amp; outputs) ***/</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">assign</span> PSLVERR  = <span class="number">0</span>;    <span class="comment">// assumes no error generation</span></span><br><span class="line"><span class="keyword">assign</span> PREADY   = <span class="number">1</span>;    <span class="comment">// assumes zero wait</span></span><br><span class="line"><span class="keyword">wire</span> write_enable   = (PENABLE &amp;&amp; PWRITE &amp;&amp; PSEL);  <span class="comment">//decodes APB3 write cycle</span></span><br><span class="line"><span class="keyword">wire</span> read_enable    = (!PWRITE &amp;&amp; PSEL);            <span class="comment">//decode APB3 read cycle</span></span><br><span class="line"><span class="comment">// ****** Your code ******</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+<p>We can see that all the I/O ports in the Verilog module has to strictly follow the APB convention mentioned above.</p>
+<h2 id="VGA"><a href="#VGA" class="headerlink" title="VGA"></a>VGA</h2><p>VGA is short for <em>Video Graphics Array</em>. Although it is a relatively aged display method (introduced by IBM in 1987), its frequency (60Hz per frame) is good enough for our display purpose. </p>
+<h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ik0wfcj20te0em40t.jpg" alt=""><br>A VGA cable has 15 pins, 6 of them are used in the project:</p>
+<ul>
+<li>Blue, Red, Green represent color for one pixel</li>
+<li>Horizontal sync and vertical sync are used to define the ends of each line and the whole frame</li>
+<li>GND for ground</li>
+</ul>
+<p>A VGA video is a <strong>stream</strong> of frames. Each frame is made up of a series of horizontal lines, and each line is made up of a series of pixels. </p>
+<p>At the beginning, there will be a scan point on top left corner of the frame. In each clock period, we should output correct RGB value for current pixel.  And the scan point will go to the next pixel. When it comes to the end of a line, the Horizontal-Sync signal will go low.</p>
+<p>Then the scan point goes line by line. When it comes to the end of the frame, the Vertical-Sync will go low.</p>
+<p>Till now, we refresh the whole frame for one time.<br><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijpln7j20km0aqt9k.jpg" alt=""></p>
+<p>In a word, to project a desired video, we just need to <strong>output correct RGB signal for each pixel in sequence</strong>.</p>
+<h3 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h3><p>The main logic for VGA display is implenmented in C code: it determines the positions of tiles, scores and health point; then writes these information in specific APB addresses. Verilog code is only for analyzing information from these APB addresses and generating corresponding signals.</p>
+<p>A 60-Hz interrupt will be generated periodically in fabric. In <em>main.c</em>,</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">__attribute__((interrupt)) <span class="function"><span class="keyword">void</span> <span class="title">Fabric_IRQHandler</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>is interrupt handler, which is responsible for refresh of the whole frame.</p>
+<h4 id="Moving-Tiles"><a href="#Moving-Tiles" class="headerlink" title="Moving Tiles"></a>Moving Tiles</h4><p>There are 8 tiles in maximum in one frame. To make them look as random as possible, I randomly generate 3 attributes for each tile:</p>
+<ul>
+<li><strong>length</strong></li>
+<li><strong>the column</strong> inside which it will move</li>
+<li><strong>delay</strong> for interval between the time when a tile goes out of the frame and when it reappears at the top of the frame.</li>
+</ul>
+<p>In <em>vga.c</em>,</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">random_mode</span><span class="params">(<span class="keyword">int</span> k)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>controls the new position of kth tile based on its old position. </p>
+<p>Besides, the attribute, <strong>left_on</strong>, <strong>right_on</strong>, will control color of the tile. When it is set to <em>true</em> inside <em>pixy.c</em>, the color will turn green or red.</p>
+<h4 id="Score-amp-Health-Point"><a href="#Score-amp-Health-Point" class="headerlink" title="Score &amp; Health Point"></a>Score &amp; Health Point</h4><p>Once <strong>left_on</strong> or <strong>right_on</strong> is set to <em>true</em> inside <em>pixy.c</em>, the variable, <strong>score</strong>, will add one.</p>
+<p>If <strong>left_on</strong> and <strong>right_on</strong> are <em>false</em> until the tile goes out of the frame, one life will lose.</p>
+<p>The display of score🔢 and heart❤️ are hard-coded in verilog. Another way to show them is using Sprites + SRAM (see below).</p>
+<h3 id="Show-More-Complicated-Graph"><a href="#Show-More-Complicated-Graph" class="headerlink" title="Show More Complicated Graph"></a>Show More Complicated Graph</h3><p>Although the display for this game is fairly simple, I tried using <a href="https://en.wikipedia.org/wiki/Sprite" target="_blank" rel="noopener">Sprites</a>and SRAM, which is used for complicated graphics (but didn’t use it in final version of project).</p>
+<p>The idea behind Sprites is that generate RGB values for each pixel in a picture; and then store them in SRAM of microcontroller; read RGB value for corresponding pixel from SRAM when scan point comes to the pixel.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ijtmm9j20gx0fwwey.jpg" alt=""></p>
+<p>The SRAM module inside SmartFusion is shown above. Pull up r_en when you are reading, pull up w_en when you are writing.</p>
+<p>However, there are two annoying issues when I implenmented it:</p>
+<ul>
+<li>Timing. When use APB and SRAM, timing of these two things need to be considered carefully. The PREADY cannot be set to high all the time since SRAM need one clock period to finish reading/writing. So PREADY should be delayed for one clock period.</li>
+<li>Memory limitation. The SRAM inside SmartFusion is only 64kB. </li>
+</ul>
+<h2 id="Nintendo-Controller"><a href="#Nintendo-Controller" class="headerlink" title="Nintendo Controller"></a>Nintendo Controller</h2><p>For the controller for the user menu selection, we’re using a classic Nintendo&reg; NES controller. This is a relatively aged controller, but its signal is easy to decode and it’s sufficient for our design.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4il5u76j215o0md428.jpg" alt=""></p>
+<p>We can see that it consists of 8 buttons: Up, Down, Left, Right, Select, Start, A and B.</p>
+<p>For more details, a <a href="http://uzebox.org/files/NES-controller-Hydra-Ch6All-v1.0.pdf" target="_blank" rel="noopener">datasheet</a> that I have referred to when programming the NES controller says that:</p>
+<blockquote>
+<p>The Nintendo Entertainment System or NES, also known as the Nintendo Family Computer (Famicom) was released in Japan in 1983 and shortly after in the USA in 1985. The system was even more successful than the Atari 2600 and more or less put the last stake in the heart of Atari home consoles forever. The NES sold more than 60,000,000 units worldwide in its heyday and still sells to this day (I just bought 4 of them from eStarland.com)! There are over 200 clones of the system in circulation and the word “Nintendo” is used in many cultures as a youth slang term with many “varied” meanings.</p>
+<p>The system itself was nothing compared to the Propeller chip’s computing power, the NES was powered by the 8-bit 6502 running at 1.79 MHz, but the NES did have quite a bit of dedicated graphics hardware making it quite a contender in the 8-bit era, it sported multiple tile maps, graphics planes, sprites, sound, and a lot more.</p>
+<p align="right"> — <i>“Game Programming for the Propeller Powered HYDRA”</i>, pp. 95 </p>
+</blockquote>
+<h3 id="Interfacing-the-Nintendo-NES-controller"><a href="#Interfacing-the-Nintendo-NES-controller" class="headerlink" title="Interfacing the Nintendo NES controller"></a>Interfacing the Nintendo NES controller</h3><p>On the back of the NES controller, it is actually organized as the following figure.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikny6vj20jg0admy7.jpg" alt="An inside view of an NES controller."></p>
+<p>We can see that there’re five wires: brown, red, orange, yellow, white. The functions of these wires are summarized below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Signal Name</th>
+<th style="text-align:center">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>GND</code></td>
+<td style="text-align:center">Brown</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>clock</code></td>
+<td style="text-align:center">Red</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>latch</code></td>
+<td style="text-align:center">Orange</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>data_out</code></td>
+<td style="text-align:center">Yellow</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>5V</code></td>
+<td style="text-align:center">White</td>
+</tr>
+</tbody>
+</table>
+<p>The states of the 8 buttons (pressed/not pressed) will be provided at the <code>data_out</code> line, bit by bit. The <code>latch</code> and the <code>clock</code> line are used to control the clocking of the <code>data_out</code> data line. In order to get the button states from the NES controller, we need to perform the following steps.</p>
+<ol>
+<li>Set the clock of the MCU to be greater than or equal to $12\mu\rm{s}$.</li>
+<li>Set <code>latch</code> line to LOW.</li>
+<li>Set <code>clock</code> line to LOW. Now, we’re in a known state.</li>
+<li>Pulse <code>latch</code> line HIGH for at least 2 cycles. This will latch the data into the shift register.</li>
+<li>Read the bits in from <code>data_out</code> line. The first bit will be available after the latching process.</li>
+<li>Pulse <code>clock</code> line 7 times to read the remaining bits.</li>
+</ol>
+<p><strong><em>Note. The bits are inverted from the data line (LOW for pressed, HIGH for not pressed).</em></strong> </p>
+<p>Based on the above rules, we can create a logic in Verilog that keeps reading the button states of the NES controller in the background. To keep things simple, we use APB interface to interact with the C coding parts, and we organize the 8 button states to be in the form of an 8-bit integer in a specific APB address that can be accessed with C code.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikm8pej213y064wey.jpg" alt="This figure shows the 8-bit integer data format we&#39;re using for NES controller."></p>
+<p>As we’re using 25MHz clock on our SmartFusion&reg; board, we need to extend our clock signal to $12\mu\rm{s}$. Thus, we need a clock divider.</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> [<span class="number">9</span>:<span class="number">0</span>] clock_divider;</span><br><span class="line"><span class="keyword">assign</span> clock_divider_max = (clock_divider == <span class="number">10'd150</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> PCLK) <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span> (~PRESERN) <span class="keyword">begin</span></span><br><span class="line">        clock_divider &lt;= <span class="number">10'd0</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (clock_divider_max) <span class="keyword">begin</span></span><br><span class="line">        clock_divider &lt;= <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">begin</span></span><br><span class="line">        clock_divider &lt;= clock_divider + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>Then, we need to create our logic to pulse the <code>latch</code> and <code>clock</code> signal, and get the bits from <code>data_out</code>. <strong>Whenever we read a new bit in, we need to shift all the old bits left by 1.</strong></p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> [<span class="number">7</span>:<span class="number">0</span>] data_in, data_complete;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">2</span>:<span class="number">0</span>] read_count;</span><br><span class="line"><span class="keyword">reg</span> start, finish;</span><br><span class="line"></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> PCLK) <span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span> (~PRESERN) <span class="keyword">begin</span></span><br><span class="line">        latch         &lt;= <span class="number">0</span>;</span><br><span class="line">        clock         &lt;= <span class="number">0</span>;</span><br><span class="line">        start         &lt;= <span class="number">1</span>;</span><br><span class="line">        finish        &lt;= <span class="number">0</span>;</span><br><span class="line">        count         &lt;= <span class="number">5'd0</span>;</span><br><span class="line">        data_in       &lt;= <span class="number">8'd0</span>;</span><br><span class="line">        data_complete &lt;= <span class="number">8'd0</span>;</span><br><span class="line">        read_count    &lt;= <span class="number">3'd0</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">if</span> (finish == <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">        data_complete &lt;= data_in;</span><br><span class="line">        finish        &lt;= <span class="number">0</span>;</span><br><span class="line">        start         &lt;= <span class="number">1</span>;</span><br><span class="line">        clock         &lt;= <span class="number">0</span>;</span><br><span class="line">        data_in       &lt;= <span class="number">8'd0</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">if</span> (clock_divider_max) <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">if</span> (start == <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">            <span class="comment">// latch the first data</span></span><br><span class="line">            latch &lt;= <span class="number">1</span>;</span><br><span class="line">            start &lt;= <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> (latch == <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">            latch &lt;= <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> (clock == <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">            clock &lt;= <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> (data_en) <span class="keyword">begin</span></span><br><span class="line">            <span class="comment">// latch data</span></span><br><span class="line">            <span class="comment">// data are inverted bits</span></span><br><span class="line">            clock      &lt;= <span class="number">1</span>;</span><br><span class="line">            data_in[<span class="number">7</span>] &lt;= data_in[<span class="number">6</span>];</span><br><span class="line">            data_in[<span class="number">6</span>] &lt;= data_in[<span class="number">5</span>];</span><br><span class="line">            data_in[<span class="number">5</span>] &lt;= data_in[<span class="number">4</span>];</span><br><span class="line">            data_in[<span class="number">4</span>] &lt;= data_in[<span class="number">3</span>];</span><br><span class="line">            data_in[<span class="number">3</span>] &lt;= data_in[<span class="number">2</span>];</span><br><span class="line">            data_in[<span class="number">2</span>] &lt;= data_in[<span class="number">1</span>];</span><br><span class="line">            data_in[<span class="number">1</span>] &lt;= data_in[<span class="number">0</span>];</span><br><span class="line">            data_in[<span class="number">0</span>] &lt;= ~data;</span><br><span class="line">            read_count &lt;= read_count + <span class="number">1</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (read_count == <span class="number">3'd7</span>) <span class="keyword">begin</span></span><br><span class="line">                <span class="comment">// latch the last data</span></span><br><span class="line">                finish     &lt;= <span class="number">1</span>;</span><br><span class="line">                read_count &lt;= <span class="number">3'd0</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h2 id="LCD-Display"><a href="#LCD-Display" class="headerlink" title="LCD Display"></a>LCD Display</h2><p>We use <a href="https://www.sparkfun.com/products/9568" target="_blank" rel="noopener">Sparkfun’s $20\times4$ serial enabled LCD display</a> in our project. The interface of this LCD is actually really simple &mdash; just UART. If you send a character <code>a</code> to it through UART, it will display an “a” on the screen; if you send a string <code>Hello World</code> to it, it will display “Hello World”.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikt7guj20go0gogqd.jpg" alt="A typical Sparkfun&#39;s 20x4 LCD display."></p>
+<p>It is worth noticing that this LCD module displays characters based on the position of a cursor. This is very similar to writing on a text file. The character sent to the module will always be written at the position of the cursor. For instance, if the current cursor position is at the first position of the first line, the incoming character <code>a</code> will then be displayed at the first position in the first line. What is worth mentioning is that there are some special ASCII character pairs that have special meanings and have been hard-coded into the LCD module. For example, some of these special characters are:</p>
+<style>
+table th:first-of-type {
+    width: 120px;
+}
+</style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Character Value</th>
+<th style="text-align:left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>0xFE, 0x01</code></td>
+<td style="text-align:left">Clear the entire display.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>0xFE, 0x80</code></td>
+<td style="text-align:left">Set cursor position to be the first position in the 1<sup>st</sup> line. The 20 values starting from <code>0x80</code> correspond to the cursor positions from the beginning of the 1<sup>st</sup> line to the end of the first line. For the first position in the 2<sup>nd</sup> line, add 64 to <code>0x80</code>; for the first position of the 3<sup>rd</sup> line, add 20 to <code>0x80</code>; for the first position of the 4<sup>th</sup> line, add 84 to <code>0x80</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>0x12</code></td>
+<td style="text-align:left">Reset the whole module.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Note. Two bytes separated by a comma means a consecutive ASCII character pair.</em> For instance, <code>0xFE, 0x80</code> means <code>0xFE</code> should be first sent to the LCD module, followed by a <code>0x80</code>.</strong></p>
+<h3 id="Constructing-the-User-Menu"><a href="#Constructing-the-User-Menu" class="headerlink" title="Constructing the User Menu"></a>Constructing the User Menu</h3><p>In terms of constructing a complete user menu, we use <code>&gt;</code> as the prompt character for the selected option. We develop a data structure called <code>LCD_Display</code> to store the current contents of the 4 lines as well as the line index of the prompt character, and another <code>Menu</code> for multiple layers of the menu. For simplicity, we set each layer of the menu has a maximum size of 6.</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikld6pj20zk0k0wet.jpg" alt=""></p>
+<p>For more detailed information, please visit our <a href="https://github.com/Regina8023/Step-On-White-Tiles/tree/master/SoftConsole/DSWT_MSS_MSS_CM3_0/DSWT_MSS_MSS_CM3_0_app" target="_blank" rel="noopener">GitHub repo</a> and take a look at the <code>menu.[ch]</code>.</p>
+<h2 id="Pixy-Camera"><a href="#Pixy-Camera" class="headerlink" title="Pixy Camera"></a>Pixy Camera</h2><p><a href="https://pixycam.com/" target="_blank" rel="noopener">Pixy camera</a> is a small and responsive open-source camera developed by CREATE Lab, a part of the Robotics Institute at Carnegie Mellon University. It is equipped with color recognition and it can tell the location of the object in real time within its field of view. It has a very nice interface for MCU, which we can integrate into our SmartFusion&reg; board. Particularly, it is able to transmit its color recognition results to MCU via three interfaces: I2C, SPI, and UART. It is known that SPI has the highest data transmission rate among the three popular protocols, so we decide to utilize its SPI interface.</p>
+<h3 id="Porting-Guidelines"><a href="#Porting-Guidelines" class="headerlink" title="Porting Guidelines"></a>Porting Guidelines</h3><p>According to the <a href="https://docs.pixycam.com/wiki/doku.php?id=wiki:v1:porting_guide" target="_blank" rel="noopener">official documentation</a>, Pixy camera has the following available ports:</p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ikefr1j20sg0e60tm.jpg" alt="The available ports and its corresponding functionality on Pixy camera."></p>
+<p>with the numbering convention (looking at the back of Pixy):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1   2</span><br><span class="line">3   4</span><br><span class="line">5   6</span><br><span class="line">7   8</span><br><span class="line">9   10</span><br></pre></td></tr></table></figure>
+<h3 id="The-Serial-Protocol"><a href="#The-Serial-Protocol" class="headerlink" title="The Serial Protocol"></a>The Serial Protocol</h3><p><em>Signature</em> is an important feature of Pixy. A signature represents a particular color: say you may want to set a signature for color red, another signature for color blue, and another signature for color yellow, etc. An <em>object</em> is the biggest object with a corresponding signature appearing in Pixy’s field of view. That is, Pixy can hold as many objects as the signatures.</p>
+<p>The whole information containing in one single image is called a <em>frame</em>. A data frame can have several objects corresponding to several signatures. Pixy’s protocol enables itself to convey information for multiple objects of different colors at a time. More specifically, its serial protocol goes as follows:</p>
+<ol>
+<li>The information for each object is 14 bytes in little endian, with the first 2 bytes starting with <code>0xaa55</code>.</li>
+<li>Two consecutive <code>0xaa55</code> starts a new frame, with the second <code>0xaa55</code> starts the new object.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Bytes    16-bit word    Description</span><br><span class="line">----------------------------------------------------------------</span><br><span class="line">0, 1     y              sync: 0xaa55=normal object, 0xaa56=color code object</span><br><span class="line">2, 3     y              checksum (sum of all 16-bit words 2-6, that is, bytes 4-13)</span><br><span class="line">4, 5     y              signature number</span><br><span class="line">6, 7     y              x center of object</span><br><span class="line">8, 9     y              y center of object</span><br><span class="line">10, 11   y              width of object</span><br><span class="line">12, 13   y              height of object</span><br></pre></td></tr></table></figure>
+<p>Above are the information needed for us to parse Pixy’s data. But how can we transmit data to Pixy to set the signatures? Fortunately, Pixy’s group have developed a very nice software called <a href="https://pixycam.com/downloads-pixy1/" target="_blank" rel="noopener">PixyMon</a> for us to accomplish this goal. This software sets up a UART communication between PC and Pixy camera, and it can transmit data to it as soon as we click the corresponding button in the software.</p>
+<p>By the means mentioned above, we’re able to get the center of the objects with specific color within Pixy’s field of view, which is a very nice method to locate the player’s feet in our project.</p>
+<p>Meanwhile, there are also other advanced features of Pixy that we haven’t explored. For details, please visit their <a href="https://pixycam.com/" target="_blank" rel="noopener">official website</a>.</p>
+<h2 id="Sound-Board"><a href="#Sound-Board" class="headerlink" title="Sound Board"></a>Sound Board</h2><p>We use <a href="https://www.adafruit.com/product/2341" target="_blank" rel="noopener">Adafruit Audio FX Mini Sound Board</a> for playing background music. </p>
+<p><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4ilekenj20m80h3jvf.jpg" alt=""></p>
+<p>By plugging in the sound board into computer using USB cable, it will show up as a new USB key. Just copy music into it, music will be written properly in its disk.</p>
+<p>To trigger audio, pull down one of trigger pins - named #0 thru #10 to; to stop audio, pull down Rst.</p>
+<p>The control of this board also uses APB. </p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><p>All code are available in <a href="https://github.com/Regina8023/Step-On-White-Tiles" target="_blank" rel="noopener">my github</a> (direcoty structure is shown below). The whole project is available in <a href="https://github.com/shineyruan/Don-t-Step-on-White-Tiles" target="_blank" rel="noopener">Ryan’s github</a>.<br><img src="http://ww1.sinaimg.cn/large/bcb9e933gy1gdm4iky1c2j20h40kiq4q.jpg" alt=""></p>
+<h1 id="Acknowledgement"><a href="#Acknowledgement" class="headerlink" title="Acknowledgement"></a>Acknowledgement</h1><p>Special thanks for </p>
+<ul>
+<li>Prof. Sample and Prof. Smith’s support throughout the semester ☕️🥃</li>
+<li>my teammates: Shiyu, Ryan and Kun’s efforts on this project 🍦🍻</li>
+<li>my own passion 🍗🍺</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/English/" rel="tag"># English</a>
+          
+            <a href="/tags/Embedded-System/" rel="tag"># Embedded System</a>
+          
+            <a href="/tags/Course-Project/" rel="tag"># Course Project</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/13/mexico_cuba/" rel="next" title="四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行 (Mexico & Cuba)">
+                <i class="fa fa-chevron-left"></i> 四个人，十四天，四座城市：坎昆，哈瓦那，特立尼达，墨西哥城自由行 (Mexico & Cuba)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/10/toronto_chicago/" rel="prev" title="去大城市看看：多伦多与芝加哥 (Toronto & Chicago)">
+                去大城市看看：多伦多与芝加哥 (Toronto & Chicago) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://i.postimg.cc/kXqm01FX/2019-01-14-22-10-51-1.jpg" alt="Jingliang Ren">
+            
+              <p class="site-author-name" itemprop="name">Jingliang Ren</p>
+              <p class="site-description motion-element" itemprop="description">Meow.</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:meow@umich.edu" title="E-Mail &rarr; mailto:meow@umich.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.linkedin.com/in/jingliang-ren-a0959b128/" title="Linkedin &rarr; https://www.linkedin.com/in/jingliang-ren-a0959b128/" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>Linkedin</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.zhihu.com/people/regina8023" title="Zhihu &rarr; https://www.zhihu.com/people/regina8023" rel="noopener" target="_blank"><i class="fa fa-fw fa-quora"></i>Zhihu</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.csdn.net/Regina8023" title="CSDN &rarr; https://blog.csdn.net/Regina8023" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Friends' Sites
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://shineyruan.github.io" title="http://shineyruan.github.io" rel="noopener" target="_blank">Ryan (Zhihao Ruan)</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://voyager1998.github.io" title="http://voyager1998.github.io" rel="noopener" target="_blank">Ken (Kun Huang)</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://dzy1997.github.io" title="http://dzy1997.github.io" rel="noopener" target="_blank">William (Zhengyuan Dong)</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Background"><span class="nav-number">1.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Game-Rule"><span class="nav-number">2.</span> <span class="nav-text">Game Rule</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Demo"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Component"><span class="nav-number">4.</span> <span class="nav-text">Component</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Technical-Details"><span class="nav-number">5.</span> <span class="nav-text">Technical Details</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Environments"><span class="nav-number">5.1.</span> <span class="nav-text">Code Environments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-mapped-I-O-amp-Advanced-Peripheral-Bus"><span class="nav-number">5.2.</span> <span class="nav-text">Memory-mapped I/O &amp; Advanced Peripheral Bus</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-in-Verilog"><span class="nav-number">5.2.1.</span> <span class="nav-text">Implementation in Verilog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VGA"><span class="nav-number">5.3.</span> <span class="nav-text">VGA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basics"><span class="nav-number">5.3.1.</span> <span class="nav-text">Basics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation"><span class="nav-number">5.3.2.</span> <span class="nav-text">Implementation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Moving-Tiles"><span class="nav-number">5.3.2.1.</span> <span class="nav-text">Moving Tiles</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Score-amp-Health-Point"><span class="nav-number">5.3.2.2.</span> <span class="nav-text">Score &amp; Health Point</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Show-More-Complicated-Graph"><span class="nav-number">5.3.3.</span> <span class="nav-text">Show More Complicated Graph</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nintendo-Controller"><span class="nav-number">5.4.</span> <span class="nav-text">Nintendo Controller</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Interfacing-the-Nintendo-NES-controller"><span class="nav-number">5.4.1.</span> <span class="nav-text">Interfacing the Nintendo NES controller</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LCD-Display"><span class="nav-number">5.5.</span> <span class="nav-text">LCD Display</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Constructing-the-User-Menu"><span class="nav-number">5.5.1.</span> <span class="nav-text">Constructing the User Menu</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pixy-Camera"><span class="nav-number">5.6.</span> <span class="nav-text">Pixy Camera</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Porting-Guidelines"><span class="nav-number">5.6.1.</span> <span class="nav-text">Porting Guidelines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Serial-Protocol"><span class="nav-number">5.6.2.</span> <span class="nav-text">The Serial Protocol</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sound-Board"><span class="nav-number">5.7.</span> <span class="nav-text">Sound Board</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code"><span class="nav-number">6.</span> <span class="nav-text">Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Acknowledgement"><span class="nav-number">7.</span> <span class="nav-text">Acknowledgement</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jingliang Ren</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="Symbols count total">47k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="Reading time total">43 mins.</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.7.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.7.0"></script>
+
+  <script src="/js/src/motion.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=6.7.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/js/src/post-details.js?v=6.7.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'hEjGFL2RQHYxyK6d4GeDT2Wc-gzGzoHsz',
+    appKey: 'bm5yqchxS7G2PhudgiDlaDHK',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#more");
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function(i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap');
+      $(e).after($wrap);
+      $wrap.append($('<button>').addClass('copy-btn').append('Copy').on('click', function(e) {
+        var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+          return $(e).text();
+        }).toArray().join('\n');
+        var ta = document.createElement('textarea');
+        var range = document.createRange(); //For Chrome
+        var sel = window.getSelection(); //For Chrome
+        var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+        ta.style.top = yPosition + 'px'; //Prevent page scroll
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.value = code;
+        ta.textContent = code; //For FireFox
+        ta.contentEditable = true;
+        ta.readOnly = false;
+        document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function(e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function() {
+          $b.text('Copy');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
